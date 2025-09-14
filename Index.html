@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détection Équipe Nationale de Basketball - Côte d'Ivoire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .ivory-pattern {
+            background: linear-gradient(135deg, #FF8C00 0%, #FFFFFF 50%, #228B22 100%);
+        }
+        
+        .professional-shadow {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .coat-of-arms {
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, #FFD700, #FF8C00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            border: 3px solid white;
+        }
+    </style>
+</head>
+<body class="min-h-screen ivory-pattern">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg border-b-4 border-orange-500">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex items-center justify-center">
+                <div class="coat-of-arms mr-4">🇨🇮</div>
+                <div class="text-center">
+                    <h1 class="text-3xl font-bold text-gray-800">FÉDÉRATION IVOIRIENNE DE BASKETBALL</h1>
+                    <p class="text-lg text-orange-600 font-semibold">Détection Équipe Nationale Sénior</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <!-- Message du Coach -->
+            <div class="bg-white professional-shadow rounded-3xl p-8 mb-12 max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">APPEL À CANDIDATURES</h2>
+                    <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-2xl p-6 mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Message du Staff Technique</h3>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "En tant que staff technique de l'équipe nationale de Côte d'Ivoire, nous recherchons 
+                        les meilleurs talents du pays pour représenter nos couleurs lors des prochaines compétitions 
+                        internationales. Cette détection est une opportunité exceptionnelle pour les joueurs 
+                        ambitieux de rejoindre l'élite du basketball ivoirien."
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center p-4 bg-orange-50 rounded-xl">
+                        <div class="text-3xl mb-2">🏆</div>
+                        <h4 class="font-bold text-gray-800 mb-2">Sélection Nationale</h4>
+                        <p class="text-sm text-gray-600">Intégration directe dans l'équipe nationale</p>
+                    </div>
+                    <div class="text-center p-4 bg-green-50 rounded-xl">
+                        <div class="text-3xl mb-2">✈️</div>
+                        <h4 class="font-bold text-gray-800 mb-2">Stage à l'Étranger</h4>
+                        <p class="text-sm text-gray-600">Séjour d'entraînement international offert</p>
+                    </div>
+                    <div class="text-center p-4 bg-blue-50 rounded-xl">
+                        <div class="text-3xl mb-2">🎯</div>
+                        <h4 class="font-bold text-gray-800 mb-2">Encadrement Pro</h4>
+                        <p class="text-sm text-gray-600">Formation avec le staff technique national</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto bg-white rounded-3xl professional-shadow p-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">DOSSIER DE CANDIDATURE</h3>
+                    <div class="w-16 h-1 bg-orange-500 mx-auto mb-4"></div>
+                    <p class="text-gray-600">Détection ouverte aux joueurs âgés de 12 ans et plus</p>
+                    <div class="bg-orange-50 border-l-4 border-orange-500 p-4 mt-4 text-left">
+                        <p class="text-sm text-gray-700 mb-3">
+                            <strong>Important :</strong> Tous les champs marqués d'un astérisque (*) sont obligatoires. 
+                            Votre candidature sera étudiée par le staff technique de la Fédération.
+                        </p>
+                        <div class="bg-red-100 border border-red-300 rounded-lg p-3">
+                            <p class="text-sm text-red-800 font-semibold">
+                                💰 <strong>FRAIS D'INSCRIPTION :</strong> 8 000 FCFA
+                            </p>
+                            <p class="text-xs text-red-700 mt-1">
+                                Le paiement se fait via WhatsApp après validation de votre dossier
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="registrationForm" class="space-y-6">
+                    <!-- Nom et Prénom -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nom *</label>
+                            <input type="text" id="lastName" required 
+                                   class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Prénom *</label>
+                            <input type="text" id="firstName" required 
+                                   class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors">
+                        </div>
+                    </div>
+
+                    <!-- Âge -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Âge *</label>
+                        <input type="number" id="age" min="12" max="35" required 
+                               class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors">
+                        <p class="text-sm text-gray-500 mt-1">Minimum 12 ans</p>
+                    </div>
+
+                    <!-- Taille -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Taille (en cm) *</label>
+                        <input type="number" id="height" min="120" max="250" required 
+                               class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors">
+                    </div>
+
+                    <!-- Poste -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Poste préféré *</label>
+                        <select id="position" required 
+                                class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors">
+                            <option value="">Sélectionne ton poste</option>
+                            <option value="Meneur">Meneur (Point Guard)</option>
+                            <option value="Arrière">Arrière (Shooting Guard)</option>
+                            <option value="Ailier">Ailier (Small Forward)</option>
+                            <option value="Ailier Fort">Ailier Fort (Power Forward)</option>
+                            <option value="Pivot">Pivot (Center)</option>
+                        </select>
+                    </div>
+
+                    <!-- Téléphone -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Numéro de téléphone *</label>
+                        <input type="tel" id="phone" required 
+                               class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors">
+                    </div>
+
+
+
+
+
+                    <!-- Submit Button -->
+                    <button type="submit" 
+                            class="w-full bg-gradient-to-r from-orange-500 to-green-600 text-white font-bold py-4 px-8 rounded-xl hover:from-orange-600 hover:to-green-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                        📋 SOUMETTRE MA CANDIDATURE
+                    </button>
+                </form>
+
+                <div class="mt-6 p-4 bg-gray-50 rounded-xl">
+                    <div class="text-center text-sm text-gray-600">
+                        <p class="font-semibold mb-2">Étapes suivantes :</p>
+                        <p>1. Validation de votre dossier par le staff technique</p>
+                        <p>2. Contact via WhatsApp pour confirmation et paiement (8 000 FCFA)</p>
+                        <p>3. Convocation officielle après paiement des frais</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">CALENDRIER DES DÉTECTIONS</h3>
+                    <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Les détections se dérouleront dans 6 villes de Côte d'Ivoire. Choisissez la ville la plus proche de chez vous.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <!-- Abidjan -->
+                    <div class="bg-white rounded-2xl p-6 professional-shadow border-l-4 border-orange-500">
+                        <div class="flex items-center mb-4">
+                            <div class="text-2xl mr-3">🏙️</div>
+                            <h4 class="text-xl font-bold text-gray-800">ABIDJAN</h4>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p><strong>📅 Dates :</strong> 1 – 3 octobre</p>
+                            <p><strong>🏟️ Lieu principal :</strong> Palais des Sports de Treichville</p>
+                            <p><strong>🏀 Terrain de secours :</strong> Gymnase de Yopougon</p>
+                        </div>
+                    </div>
+
+                    <!-- Bouaké -->
+                    <div class="bg-white rounded-2xl p-6 professional-shadow border-l-4 border-green-600">
+                        <div class="flex items-center mb-4">
+                            <div class="text-2xl mr-3">🏘️</div>
+                            <h4 class="text-xl font-bold text-gray-800">BOUAKÉ</h4>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p><strong>📅 Dates :</strong> 5 – 6 octobre</p>
+                            <p><strong>🏟️ Lieu principal :</strong> Palais des Sports de Bouaké</p>
+                            <p><strong>🏀 Terrain de secours :</strong> Gymnase Municipal de Bouaké</p>
+                        </div>
+                    </div>
+
+                    <!-- San Pedro -->
+                    <div class="bg-white rounded-2xl p-6 professional-shadow border-l-4 border-blue-600">
+                        <div class="flex items-center mb-4">
+                            <div class="text-2xl mr-3">🌊</div>
+                            <h4 class="text-xl font-bold text-gray-800">SAN PEDRO</h4>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p><strong>📅 Dates :</strong> 8 – 9 octobre</p>
+                            <p><strong>🏟️ Lieu principal :</strong> Palais des Sports de San Pedro</p>
+                            <p><strong>🏀 Terrain de secours :</strong> Gymnase Municipal</p>
+                        </div>
+                    </div>
+
+                    <!-- Korhogo -->
+                    <div class="bg-white rounded-2xl p-6 professional-shadow border-l-4 border-purple-600">
+                        <div class="flex items-center mb-4">
+                            <div class="text-2xl mr-3">🌾</div>
+                            <h4 class="text-xl font-bold text-gray-800">KORHOGO</h4>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p><strong>📅 Dates :</strong> 11 – 12 octobre</p>
+                            <p><strong>🏟️ Lieu principal :</strong> Gymnase Municipal de Korhogo</p>
+                            <p><strong>🏀 Terrain de secours :</strong> Terrain couvert local</p>
+                        </div>
+                    </div>
+
+                    <!-- Yamoussoukro -->
+                    <div class="bg-white rounded-2xl p-6 professional-shadow border-l-4 border-yellow-600">
+                        <div class="flex items-center mb-4">
+                            <div class="text-2xl mr-3">🏛️</div>
+                            <h4 class="text-xl font-bold text-gray-800">YAMOUSSOUKRO</h4>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p><strong>📅 Dates :</strong> 14 – 15 octobre</p>
+                            <p><strong>🏟️ Lieu principal :</strong> Gymnase Charles Konan Banny</p>
+                            <p><strong>🏀 Terrain de secours :</strong> Gymnase Municipal</p>
+                        </div>
+                    </div>
+
+                    <!-- Daloa -->
+                    <div class="bg-white rounded-2xl p-6 professional-shadow border-l-4 border-red-600">
+                        <div class="flex items-center mb-4">
+                            <div class="text-2xl mr-3">🌳</div>
+                            <h4 class="text-xl font-bold text-gray-800">DALOA</h4>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p><strong>📅 Dates :</strong> 17 – 18 octobre</p>
+                            <p><strong>🏟️ Lieu principal :</strong> Gymnase Municipal de Daloa</p>
+                            <p><strong>🏀 Terrain de secours :</strong> Terrain couvert local</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-xl">
+                    <h4 class="font-bold text-gray-800 mb-3">📋 INFORMATIONS PRATIQUES :</h4>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li>• <strong>Horaires :</strong> 8h00 - 17h00 (accueil dès 7h30)</li>
+                        <li>• <strong>Matériel requis :</strong> Tenue de sport, chaussures de basket, bouteille d'eau</li>
+                        <li>• <strong>Documents :</strong> Pièce d'identité, certificat médical, autorisation parentale (mineurs)</li>
+                        <li>• <strong>Inscription :</strong> Obligatoire via le formulaire ci-dessus avant votre venue</li>
+                        <li>• <strong>Contact :</strong> 📧 secretariat@fibb.basketball</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">CRITÈRES D'ÉVALUATION</h3>
+                    <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Le staff technique de la Fédération Ivoirienne de Basketball évaluera les candidats selon les critères suivants
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-orange-50 rounded-2xl p-6 text-center border-2 border-orange-100">
+                        <div class="text-4xl mb-4">💪</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">Condition Physique</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Endurance cardiovasculaire</li>
+                            <li>• Vitesse et agilité</li>
+                            <li>• Force et explosivité</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-green-50 rounded-2xl p-6 text-center border-2 border-green-100">
+                        <div class="text-4xl mb-4">🎯</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">Technique</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Maîtrise du dribble</li>
+                            <li>• Précision au tir</li>
+                            <li>• Qualité des passes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-blue-50 rounded-2xl p-6 text-center border-2 border-blue-100">
+                        <div class="text-4xl mb-4">🧠</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">Intelligence de Jeu</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Vision du jeu</li>
+                            <li>• Prise de décision</li>
+                            <li>• Lecture défensive</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-purple-50 rounded-2xl p-6 text-center border-2 border-purple-100">
+                        <div class="text-4xl mb-4">🤝</div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">Mental & Attitude</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Esprit d'équipe</li>
+                            <li>• Détermination</li>
+                            <li>• Capacité d'adaptation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-12 bg-gray-50 rounded-2xl p-8">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4 text-center">INFORMATIONS IMPORTANTES</h4>
+                    <div class="grid md:grid-cols-2 gap-6 text-sm text-gray-700">
+                        <div>
+                            <h5 class="font-semibold mb-2">📅 Processus de sélection :</h5>
+                            <ul class="space-y-1">
+                                <li>• Étude des dossiers de candidature</li>
+                                <li>• Tests physiques et techniques</li>
+                                <li>• Matchs d'évaluation</li>
+                                <li>• Décision finale du staff</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold mb-2">📋 Documents requis :</h5>
+                            <ul class="space-y-1">
+                                <li>• Certificat médical d'aptitude</li>
+                                <li>• Licence fédérale en cours</li>
+                                <li>• Autorisation parentale (mineurs)</li>
+                                <li>• Photo d'identité récente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupération des données du formulaire
+            const lastName = document.getElementById('lastName').value;
+            const firstName = document.getElementById('firstName').value;
+            const age = document.getElementById('age').value;
+            const height = document.getElementById('height').value;
+            const position = document.getElementById('position').value;
+            const phone = document.getElementById('phone').value;
+            
+            // Vérification de l'âge minimum
+            if (parseInt(age) < 12) {
+                alert('Désolé, l\'âge minimum requis est de 12 ans pour cette détection.');
+                return;
+            }
+            
+            // Création du message WhatsApp professionnel
+            const message = `🇨🇮 CANDIDATURE ÉQUIPE NATIONALE CÔTE D'IVOIRE 🏀
+
+📋 INFORMATIONS PERSONNELLES:
+• Nom: ${lastName}
+• Prénom: ${firstName}
+• Âge: ${age} ans
+• Taille: ${height} cm
+• Téléphone: ${phone}
+
+🏀 PROFIL SPORTIF:
+• Poste: ${position}
+
+💰 FINALISATION INSCRIPTION:
+Je souhaite finaliser mon inscription en payant les frais de 8 000 FCFA.
+
+---
+Candidature soumise pour la détection de l'équipe nationale sénior de Côte d'Ivoire.
+
+Cordialement,
+${firstName} ${lastName}`;
+            
+            // Encodage du message pour l'URL
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Redirection vers WhatsApp
+            const whatsappUrl = `https://wa.me/225705230033?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Message de confirmation professionnel
+            alert('Votre candidature a été transmise avec succès ! Vous allez être redirigé vers WhatsApp pour finaliser votre inscription et effectuer le paiement de 8 000 FCFA.');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97f2834922feb7a5',t:'MTc1Nzg4MDQ3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
